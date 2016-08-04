@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{102F8E99-4721-4F94-8B6D-92FF1CA711ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JukeWeb.Foundry.Utilities</RootNamespace>
+    <AssemblyName>JukeWeb.Foundry.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\JukeWeb.DN\Development\Source\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>JukeWeb.Foundry.SN_Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Live|AnyCPU'">
+    <OutputPath>bin\Live\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.32.4308.26097, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.0.1.21762, Culture=neutral, PublicKeyToken=1be061d481fb866d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Gma.QrCodeNet.Encoder\obj\Debug\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="JukeWeb.Foundry.Exceptions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1be061d481fb866d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JukeWeb.Foundry.Exceptions\obj\Debug\JukeWeb.Foundry.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToTwitter, Version=2.1.11.0, Culture=neutral, PublicKeyToken=957107be965c25d9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\LinqToTwitter.2.1.11\lib\net40\LinqToTwitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nQuant.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\nQuant.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sysrepublic.RTI.Adapter.Interface, Version=2.0.0.0, Culture=neutral, PublicKeyToken=f22c54c6eecad369, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Sysrepublic.RTI.Adapter.Interface\2.0.0.0__f22c54c6eecad369\Sysrepublic.RTI.Adapter.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Sysrepublic.RTI.Common.ExpressionBuilder, Version=2.0.0.0, Culture=neutral, PublicKeyToken=f22c54c6eecad369, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Sysrepublic.RTI.Common.ExpressionBuilder\2.0.0.0__f22c54c6eecad369\Sysrepublic.RTI.Common.ExpressionBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.1.1.3\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="TranslatorService.Speech, Version=1.3.0.0, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\TranslatorService.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="yeti.mmedia, Version=1.0.5184.40569, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\yeti.mmedia.dll</HintPath>
+    </Reference>
+    <Reference Include="yeti.mp3, Version=1.0.5184.40757, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\yeti.mp3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Attributes\BCPIgnoreAttribute.cs" />
+    <Compile Include="Common\IO\ObjectToCSV.cs" />
+    <Compile Include="Extensions\Core.Extensions.Nullable.cs" />
+    <Compile Include="Extensions\Core.Extensions.Queryable.cs" />
+    <Compile Include="Extensions\Core.Extensions.Decimal.cs" />
+    <Compile Include="Extensions\Core.Extensions.Double.cs" />
+    <Compile Include="Extensions\Core.Extensions.Exception.cs" />
+    <Compile Include="Extensions\Core.Extensions.Json.cs" />
+    <Compile Include="Extensions\Core.Extensions.List.cs" />
+    <Compile Include="Extensions\Core.Extensions.Stream.cs" />
+    <Compile Include="Extensions\Core.Extensions.TimeSpan.cs" />
+    <Compile Include="Interfaces\IReport.cs" />
+    <Compile Include="Interfaces\IReportCollection.cs" />
+    <Compile Include="JsonpResult.cs" />
+    <Compile Include="Utilities\AssemblyUtils.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Common\Attributes\ArrayIndexAttribute.cs" />
+    <Compile Include="Common\FoundryGeneralException.cs" />
+    <Compile Include="Common\LamdaComparer.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="DataAnnotation\DataAnnotationUtilities.cs" />
+    <Compile Include="Utilities\EncryptionUtils.cs" />
+    <Compile Include="EventLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\Core.Extensions.Array.cs" />
+    <Compile Include="Extensions\Core.Extensions.cs" />
+    <Compile Include="Extensions\Core.Extensions.Enum.cs" />
+    <Compile Include="Extensions\Core.Extensions.Int.cs" />
+    <Compile Include="Extensions\Core.Extensions.String.cs" />
+    <Compile Include="Extensions\Core.Extensions.XDocument..cs" />
+    <Compile Include="Utilities\FileUtilities.cs" />
+    <Compile Include="Utilities\HtmlUtilities.cs" />
+    <Compile Include="Utilities\HttpUtilities.cs" />
+    <Compile Include="Utilities\Images\ImageCompress.cs" />
+    <Compile Include="Utilities\Images\ImageConverter.cs" />
+    <Compile Include="ImageMergeDirection.cs" />
+    <Compile Include="Utilities\Images\ImageUtils.cs" />
+    <Compile Include="Utilities\Images\PhotoCollage.cs" />
+    <Compile Include="Utilities\Images\SvgUtils.cs" />
+    <Compile Include="Utilities\IOUtils.cs" />
+    <Compile Include="Parser\CSSParser\CSSParser.cs" />
+    <Compile Include="Parser\CSSParser\CSSRenderer.cs" />
+    <Compile Include="Parser\CSSParser\HSV.cs" />
+    <Compile Include="Parser\CSSParser\HTMLRenderer.cs" />
+    <Compile Include="Parser\CSSParser\Model\Attribute.cs" />
+    <Compile Include="Parser\CSSParser\Model\AttributeOperator.cs" />
+    <Compile Include="Parser\CSSParser\Model\Combinator.cs" />
+    <Compile Include="Parser\CSSParser\Model\CSS.cs" />
+    <Compile Include="Parser\CSSParser\Model\CSSDocument.cs" />
+    <Compile Include="Parser\CSSParser\Model\Declaration.cs" />
+    <Compile Include="Parser\CSSParser\Model\Directive.cs" />
+    <Compile Include="Parser\CSSParser\Model\DirectiveType.cs" />
+    <Compile Include="Parser\CSSParser\Model\Expression.cs" />
+    <Compile Include="Parser\CSSParser\Model\Function.cs" />
+    <Compile Include="Parser\CSSParser\Model\IDeclarationContainer.cs" />
+    <Compile Include="Parser\CSSParser\Model\Import.cs" />
+    <Compile Include="Parser\CSSParser\Model\IRuleSetContainer.cs" />
+    <Compile Include="Parser\CSSParser\Model\ISelectorContainer.cs" />
+    <Compile Include="Parser\CSSParser\Model\Media.cs" />
+    <Compile Include="Parser\CSSParser\Model\MediaTag.cs" />
+    <Compile Include="Parser\CSSParser\Model\Medium.cs" />
+    <Compile Include="Parser\CSSParser\Model\Property.cs" />
+    <Compile Include="Parser\CSSParser\Model\PropertyValue.cs" />
+    <Compile Include="Parser\CSSParser\Model\RuleSet.cs" />
+    <Compile Include="Parser\CSSParser\Model\Selector.cs" />
+    <Compile Include="Parser\CSSParser\Model\SimpleSelector.cs" />
+    <Compile Include="Parser\CSSParser\Model\Tag.cs" />
+    <Compile Include="Parser\CSSParser\Model\TagType.cs" />
+    <Compile Include="Parser\CSSParser\Model\Term.cs" />
+    <Compile Include="Parser\CSSParser\Model\TermType.cs" />
+    <Compile Include="Parser\CSSParser\Model\Unit.cs" />
+    <Compile Include="Parser\CSSParser\Model\ValueType.cs" />
+    <Compile Include="Parser\CSSParser\Parser.cs" />
+    <Compile Include="Parser\CSSParser\Scanner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\NetworkUtils.cs" />
+    <Compile Include="Utilities\QRCodeUtilities.cs" />
+    <Compile Include="QueryParameter.cs" />
+    <Compile Include="Reflection\ObjectBinder.cs" />
+    <Compile Include="Reflection\ObjectBinderBase.cs" />
+    <Compile Include="Reflection\ObjectBinderReflection.cs" />
+    <Compile Include="Reflection\PropertyCopy.cs" />
+    <Compile Include="Reflection\PropertyMap.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Libraries\RegexLibrary.cs" />
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="Utilities\RndGenUtilities.cs" />
+    <Compile Include="Utilities\SoundUtilities.cs" />
+    <Compile Include="Utilities\StringUtils.cs" />
+    <Compile Include="ThreadWorker.cs" />
+    <Compile Include="Utilities\TimeUtilities.cs" />
+    <Compile Include="Utilities\WCFUtils.cs" />
+    <Compile Include="Utilities\RandomUtilities.cs" />
+    <Compile Include="Utilities\XMLUtilities.cs" />
+    <Compile Include="Interfaces\IXmlSerializable.cs" />
+    <Compile Include="Common\BaseTemplates\XmlSerializableBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JukeWeb.Foundry.SN_Key.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\Etymonline\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Q /Y "$(TargetDir)$(TargetName).*" "C:\Projects\Applications\JukeWeb\JukeWeb.Foundry\Development\Source\Bin\"
+xcopy /Q /Y "$(TargetDir)$(TargetName).*" "C:\Projects\Applications\JukeWeb\JukeWeb.DN\Development\Source\JukeWeb.DN.Deploy\GAC"
+
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\x64\gacutil.exe" /u $(TargetName)
+
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\x64\gacutil.exe" /i $(TargetPath)</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\..\..\JukeWeb.PowerPivots\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
